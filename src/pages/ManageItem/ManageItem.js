@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import "./ManageItem.css";
 
 const ManageItem = () => {
@@ -36,8 +37,9 @@ const ManageItem = () => {
             })
                 .then(res => res.json())
                 .then(data => console.log(data))
+            toast.success(`${name} Successfully Deleted`)    
         } else {
-            alert("Thanks you save my life")
+            toast.info("Thank you for not Deleted")
         }
     }
 

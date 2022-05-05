@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const MyItem = () => {
@@ -39,8 +40,9 @@ const MyItem = () => {
             })
                 .then(res => res.json())
                 .then(data => console.log(data))
+            toast.success(`${name} Successfully Deleted`);    
         } else {
-            alert("Thanks you save my life")
+            toast.info("Thank you for not Deleted")
         }
     }
     return (

@@ -6,6 +6,7 @@ import Social from '../Social/Social';
 import "./Register.css";
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from "../../../firebase.init"
+import { toast } from 'react-toastify';
 
 const Register = () => {
 
@@ -34,7 +35,7 @@ const Register = () => {
             await createUserWithEmailAndPassword(email, password)
             await updateProfile({ displayName })
         } else {
-            alert("please accepet our term and condition")
+            toast.warn("Accepet our term and condition")
         }
     }
 

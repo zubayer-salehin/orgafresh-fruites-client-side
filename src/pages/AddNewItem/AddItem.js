@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useFruites from '../Hooks/useFruites';
-
 
 
 const AddEvent = () => {
@@ -53,8 +53,10 @@ const AddEvent = () => {
                 .then(data => {
                     console.log('Success:', data);
                 })
+            e.target.reset();    
+            toast.success("Added Successfully");    
         } else {
-            alert("Fruite is already exesist");
+            toast.warn("Fruite Name is Already Exists");
         }
     }
 

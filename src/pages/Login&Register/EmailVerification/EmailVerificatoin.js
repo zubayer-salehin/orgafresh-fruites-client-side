@@ -2,6 +2,7 @@ import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useAuthState, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import "./EmailVerfication.css"
 
@@ -12,7 +13,7 @@ const EmailVerificatoin = () => {
 
     const resendEmail = async () => {
         await sendEmailVerification();
-        alert("Email has been sent");
+        toast.success("Email has been Sent");
     }
 
     return (

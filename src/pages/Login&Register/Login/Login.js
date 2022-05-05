@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useRef } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Social from '../Social/Social';
 import "./Login.css"
@@ -39,9 +40,9 @@ const Login = () => {
         const email = emailRef.current.value
         if (email) {
             await sendPasswordResetEmail(email)
-            alert("Sent Mail");
+            toast.success("Sent Mail Successfully");
         }else{
-            alert("please enter your email");
+            toast.warn("please enter your email");
         }
     }
 
