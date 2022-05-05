@@ -30,7 +30,7 @@ const AddEvent = () => {
             }
             console.log(addItemInfo);
 
-            fetch('http://localhost:5000/fruites', {
+            fetch('https://immense-tundra-86422.herokuapp.com/fruites', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const AddEvent = () => {
                     console.log('Success:', data);
                 })
 
-            fetch('http://localhost:5000/myItem', {
+            fetch('https://immense-tundra-86422.herokuapp.com/myItem', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

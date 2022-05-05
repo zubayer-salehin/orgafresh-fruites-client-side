@@ -14,7 +14,7 @@ const MyItem = () => {
 
     useEffect(() => {
         const email = user.email
-        fetch(`http://localhost:5000/myItem?email=${email}`)
+        fetch(`https://immense-tundra-86422.herokuapp.com/myItem?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 console.log("success", data)
@@ -26,7 +26,7 @@ const MyItem = () => {
     const handleDeleteItem = (id,email,name) => {
         const confirmBox = window.confirm("Are you sure you want to delete?");
         if (confirmBox) {
-            fetch(`http://localhost:5000/myItem/${id}`, {
+            fetch(`https://immense-tundra-86422.herokuapp.com/myItem/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -34,7 +34,7 @@ const MyItem = () => {
                     setFruiteName(name);
                 })
 
-            fetch(`http://localhost:5000/fruites?email=${email}&name=${name}`, {
+            fetch(`https://immense-tundra-86422.herokuapp.com/fruites?email=${email}&name=${name}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

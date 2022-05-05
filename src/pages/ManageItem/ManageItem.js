@@ -13,7 +13,7 @@ const ManageItem = () => {
     let index = 0;
 
     useEffect(() => {
-        fetch("http://localhost:5000/fruites")
+        fetch("https://immense-tundra-86422.herokuapp.com/fruites")
             .then(res => res.json())
             .then(data => {
                 setFruites(data)
@@ -24,14 +24,14 @@ const ManageItem = () => {
     const handleDeleteItem = (id, email, name) => {
         const confirmBox = window.confirm("Are you sure you want to delete?");
         if (confirmBox) {
-            fetch(`http://localhost:5000/fruites/${id}`, {
+            fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
                 .then(data => {
                     setDeleteId(id);
                 })
-            fetch(`http://localhost:5000/myItem?email=${email}&name=${name}`, {
+            fetch(`https://immense-tundra-86422.herokuapp.com/myItem?email=${email}&name=${name}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

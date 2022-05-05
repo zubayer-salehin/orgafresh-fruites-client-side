@@ -22,7 +22,7 @@ const FruiteDetail = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/fruites/${id}`)
+        fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`)
             .then(res => res.json())
             .then(data => setFruite(data))
     }, [id,updateQuantity,updateSold,addQuantity,formQuantity])
@@ -39,7 +39,7 @@ const FruiteDetail = () => {
             sold: soldIncrease
         }
 
-        fetch(`http://localhost:5000/fruites/${id}`, {
+        fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`, {
             method: 'PUT',
             body: JSON.stringify(user),
             headers: {
@@ -62,7 +62,7 @@ const FruiteDetail = () => {
                 sold: fruite.sold
             }
     
-            fetch(`http://localhost:5000/fruites/${id}`, {
+            fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify(user),
                 headers: {

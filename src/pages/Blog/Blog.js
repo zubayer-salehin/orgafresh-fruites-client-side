@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
 
     const handleDeleteAllData = () => {
-        fetch("http://localhost:5000/fruites", {
+        fetch("https://immense-tundra-86422.herokuapp.com/fruites", {
             method: "DELETE"
         })
             .then(res => res.json())
