@@ -12,40 +12,40 @@ const FruiteDetail = () => {
 
     const { id } = useParams();
     const [fruite, setFruite] = useState({});
-    const [updateQuantity, setupdateQuantity] = useState(fruite.quantity);
-    const [updateSold, setupdateSold] = useState(fruite.sold);
+    const [updateQuantity, setUpdateQuantity] = useState(0);
 
 
     const [show, setShow] = useState(false);
-    const [addQuantity, setAddQuantity] = useState("");
-    const [formQuantity,setFormQuantity] = useState(fruite.quantity);
+    const [addQuantity, setAddQuantity] = useState(0);
+    const [getInputUpdateQuantity, setGetInputUpdateQuantity] = useState(0);
 
 
     useEffect(() => {
         fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`)
             .then(res => res.json())
             .then(data => setFruite(data))
-    }, [id,updateQuantity,updateSold,addQuantity,formQuantity])
+    }, [id, updateQuantity, getInputUpdateQuantity])
 
 
     const handleDelivered = () => {
-        const quantityDecrease = fruite.quantity - 1
-        setupdateQuantity(quantityDecrease);
-        const soldIncrease = fruite.sold + 1
-        setupdateSold(soldIncrease);
 
+        const quantityDecrease = fruite.quantity - 1
+        const soldIncrease = fruite.sold + 1
         const user = {
             quantity: quantityDecrease,
             sold: soldIncrease
         }
-
         fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`, {
             method: 'PUT',
             body: JSON.stringify(user),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
-            },
+            }
         })
+            .then(res => res.json())
+            .then(data => {
+                setUpdateQuantity(updateQuantity + 1);
+            })
     }
 
     const handleClose = () => {
@@ -55,13 +55,12 @@ const FruiteDetail = () => {
     const handleQuantity = () => {
 
         if (addQuantity) {
+
             const totalQuantity = fruite.quantity + Number(addQuantity)
-            setFormQuantity(totalQuantity);
             const user = {
                 quantity: totalQuantity,
                 sold: fruite.sold
             }
-    
             fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify(user),
@@ -69,6 +68,10 @@ const FruiteDetail = () => {
                     'Content-type': 'application/json; charset=UTF-8',
                 }
             })
+            .then(res => res.json())
+            .then(data => {
+                setGetInputUpdateQuantity(totalQuantity + 1);
+            }) 
             handleClose()
         } else {
             alert("please enter a quantity number");
