@@ -1,0 +1,32 @@
+.fw-500{
+    font-weight: 500;
+}
+
+.deleteBtn{
+    width:175px;
+    margin-right:5px;
+}
+
+.delete-icon{
+    margin-right:5px;
+}
+
+.delete-message{
+    background-color: #fbe9e7;
+    color:#BA2929;
+    padding:15px 25px;
+    border-radius: 2px;
+}
+
+.modal-delete-btn{
+    background-color: #BA2929 !important;
+}
+
+.modal-cancle-btn{
+    background-color: #f0f0f0 !important;
+    color:gray !important;
+}
+
+.add-item-btn{
+    background-color: #29b81c;
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Apple",
+    "image": "https://res.cloudinary.com/john-mantas/image/upload/v1537291846/codepen/delicious-apples/green-apple-with-slice.png",
+    "description": "Apples are an incredibly nutritious fruit that offers multiple health benefits. They're rich in fiber and antioxidants",
+    "price":"$20",
+    "quantity":280,
+    "supplierName":"Robin Ahmed",
+    "sold":125
+  },
+  {
+    "name": "Cherry",
+    "image": "https://i.ibb.co/3d1fB4g/cherries-background-cherries-plant-fruit-food-cherry-transparent-png-290808-removebg-preview.png",
+    "description": "Cherries are classified as drupes, which are a subcategory of the fruit genus. Drupes, sometimes referred to as stone fruits",
+    "price":"$15",
+    "quantity":340,
+    "supplierName":"Shafik Mia",
+    "sold":225
+  },
+  {
+    "name": "Mango",
+    "image": "https://i.ibb.co/ZSGz68s/ripe-mango-isolated-on-white-260nw-1297537549-removebg-preview.png",
+    "description": "They are a great source of magnesium and potassium, both of which are connected to lower blood pressure and a regular pulse",
+    "price":"$18",
+    "quantity":540,
+    "supplierName":"Rafik Uddin",
+    "sold":375
+  },
+  {
+    "name": "Orange",
+    "image": "https://i.ibb.co/Ht19jss/05795a16b647118ffb6629390e995adb-removebg-preview.png",
+    "description": "They are a good source of vitamin C, as well as several other vitamins, minerals, and antioxidants.Protects your cells from damage",
+    "price":"$33",
+    "quantity":940,
+    "supplierName":"Taufik Islam",
+    "sold":643
+  },
+  {
+    "name": "Graps",
+    "image": "https://i.ibb.co/JCNcyKT/fresh-common-black-graps-108-w300-removebg-preview.png",
+    "description": "The nutrients in grapes may help protect against cancer, eye problems, cardiovascular disease, and other health conditions",
+    "price":"$45",
+    "quantity":470,
+    "supplierName":"Taki Hossein",
+    "sold":435
+  },
+  {
+    "name": "Watermelon",
+    "image": "https://i.ibb.co/93sp5Vb/132577049-single-whole-mini-watermelon-isolated-on-white-background-organic-and-fresh-picked-summer.png",
+    "description": "Watermelon is rich in an amino acid called citrulline that may help move blood through your body and can lower your blood pressure",
+    "price":"$65",
+    "quantity":94,
+    "supplierName":"Rifat Hassan",
+    "sold":41
+  }
+]

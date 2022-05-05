@@ -1,0 +1,58 @@
+.fruite-container {
+    display: flex;
+    justify-content: center;
+}
+
+.fruite-wrapper {
+    width: 55%;
+    margin:37px 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.fruite-image {
+    width: 40%
+}
+
+.fruite-info {
+    width: 60%
+}
+
+.fruite-text-color {
+    color: #a6a6a6;
+}
+
+.fruite-title-color {
+    color: #403f3f;
+    font-size: 40px;
+}
+
+.te-ge {
+    color: #4D96FF;
+}
+
+.fruite-price {
+    color: #87c140;
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.fruite-icon {
+    color: #87c140;
+    margin-right: 5px;
+}
+
+.delivered {
+    padding: 12px 40px !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.delivered:active {
+    transform: scale(0.97);
+}
+
+.restock{
+    border: none;
+    color:white;
+    border-radius: 2px;
+    font-weight: 500;
+}

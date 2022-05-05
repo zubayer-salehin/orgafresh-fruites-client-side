@@ -1,0 +1,18 @@
+.emailverfication-container{
+    width:100vw;
+    height: 499px;
+}
+.email-icon{
+    color:#87c140;
+    margin: 15px 0px 10px;
+    font-size: 55px;
+}
+
+.text-gray{
+    color:#4d4c4c;
+    font-weight: 500;
+}
+
+.shadow-effect{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

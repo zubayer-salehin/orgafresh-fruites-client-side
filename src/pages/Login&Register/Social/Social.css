@@ -1,0 +1,22 @@
+.social-icon img{
+    width:25px;
+    height:25px;
+    margin-right: 10px;
+}
+
+.google{
+    padding:6px 15px;
+    border: 1px solid #717070;
+    background-color: white;
+    outline: none;
+    margin-right:12px;
+    font-weight: 500;
+}
+
+.github{
+    padding:6px 15px;
+    border: 1px solid #717070;
+    outline: none;
+    background-color: white;
+    font-weight: 500;
+}

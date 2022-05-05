@@ -1,0 +1,68 @@
+.orStyle div{
+    width:24%;
+    height:1px;
+    background-color: gray;
+}
+
+.title{
+    color:#727272;
+}
+
+.redirect-page-link{
+    color:#717070;
+    font-size: 15px;
+}
+
+.green{
+    color:#87c140;
+    text-decoration: none;
+}
+
+#name,#email,#password{
+    width:215px;
+    height:42px;
+    border-radius: 5px;
+    color:#666;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.bg-green{
+    background-color:#87c140;
+    font-weight: 500;
+}
+
+.icon-position-set {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    font-size: 20px;
+    color: #666;
+}
+
+.input{
+    border:1px solid #e5e5e5;
+    margin-bottom: 15px;
+}
+
+.input:focus-within{
+    border-color:#87c140;
+}
+
+.btn-padding{
+    padding:11px 0px;
+}
+
+.hover-stop:hover{
+    color:#87c140;
+}
+
+.register-width{
+    width:344px;
+}
+
+.form-shadow{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+}

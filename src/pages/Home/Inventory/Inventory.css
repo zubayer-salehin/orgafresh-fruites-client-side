@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.inventory-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 20px;
+  gap: 75px;
+}
