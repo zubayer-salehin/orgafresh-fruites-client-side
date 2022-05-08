@@ -12,6 +12,7 @@
     height:350px;
     background-color: #29b81c;
     color:#fff;
+    border-radius: 4px;
 }
 
 .notFound-wrapper h1{
