@@ -49,13 +49,13 @@ const Inventory = () => {
                     {fruites.map(product => <Product key={Math.random() * 10000} product={product}></Product>)}
                 </div>
                 <div className='d-block pt-3 text-center'>
-                    <button id='prevNextBtn' onClick={handlePreviou} className='me-5'>Prev</button>
+                    <button id='prevNextBtn' onClick={handlePreviou} className='prevBtn'>Prev</button>
                     <div className='pagination d-inline'>
                         {[...Array(pageCount).keys()].map(number => <button
                             onClick={() => setPage(number)} className={page === number ? "selected" : ""}
                             key={Math.random * 10000}>{number + 1}</button>)}
                     </div>
-                    <button onClick={handleNext} id='prevNextBtn' className='ms-4'>Next</button>
+                    <button onClick={handleNext} id='prevNextBtn' className='nextBtn'>Next</button>
                 </div>
             </Container>
             <div className="text-center pt-4">

@@ -11,7 +11,7 @@ const Product = ({ product }) => {
     const navigate = useNavigate();
 
     return (
-        <Container>
+        <div className={style.product_wrapper}>
             <section className={style.product}>
                 <div className={style.product__photo}>
                     <div className={style.photo_container}>
@@ -20,7 +20,7 @@ const Product = ({ product }) => {
                         </div>
                     </div>
                 </div>
-                <div className={style.product__info}>
+                <div className={style.product_info}>
                     <div className={style.title}>
                         <h1>{product.name}</h1>
                     </div>
@@ -42,12 +42,12 @@ const Product = ({ product }) => {
                     </div>
                     <div className={style.description}>
                         <h3 className={style.title_style}>BENEFITS</h3>
-                        <p className='pe-2'>{product.description.slice(0,120)}</p>
+                        <p className={style.product_description}>{product.description.slice(0, 120)}</p>
                     </div>
                     <button onClick={() => navigate(`/inventory/${product._id}`)} className={style.buy__btn}>MANAGE TO STOCK</button>
                 </div>
             </section>
-        </Container>
+        </div>
     );
 };
 

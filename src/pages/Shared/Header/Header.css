@@ -1,3 +1,8 @@
+.header-container{
+    margin:0px 48px;
+    padding:0px 48px;
+}
+
 .button {
     border: none;
     border-radius: 2px;
@@ -31,4 +36,17 @@
 .fs-15px-fw-500{
     font-size:15px;
     font-weight:500;
+}
+
+@media (max-width: 576px) {
+    .header-container{
+        margin:0px 20px;
+        padding:0px;
+    }
+    .toggle-btn{
+        background-color:white;
+    }
+    .logOut-lonIn{
+        text-align: center;
+    }
 }

@@ -2,7 +2,7 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import "./Header.css";
 import CustomLink from "../CustomLink/CustomLink"
@@ -13,9 +13,9 @@ const Header = () => {
 
     return (
         <Navbar sticky='top' collapseOnSelect expand="lg" style={{ background: "black" }}>
-            <Container fluid className='mx-5 px-5' >
+            <Container fluid className='header-container' >
                 <Navbar.Brand className='m-0' as={Link} to="/home"><img src="https://demo.alura-studio.com/orgafresh/wp-content/uploads/2018/07/logo3-bottom.png" alt="" /></Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"  className='toggle-btn'/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto d-flex align-items-center pt-1">
 
@@ -31,7 +31,7 @@ const Header = () => {
                         }
                         <CustomLink className='p-2 mx-2 fs-15px-fw-500' as={Link} to="/blog">BLOG</CustomLink>
                     </Nav>
-                    <Nav>
+                    <Nav className='logOut-lonIn'>
                         {user ?
                             <Nav.Link className='m-0' as={Link} to="/login"><button onClick={() => signOut(auth)} className="button ripple">Log Out</button></Nav.Link>
                             :
