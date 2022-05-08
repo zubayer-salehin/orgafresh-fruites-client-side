@@ -1,56 +1,242 @@
 [
   {
-    "name": "Apple",
-    "image": "https://res.cloudinary.com/john-mantas/image/upload/v1537291846/codepen/delicious-apples/green-apple-with-slice.png",
-    "description": "Apples are an incredibly nutritious fruit that offers multiple health benefits. They're rich in fiber and antioxidants",
-    "price":"$20",
-    "quantity":280,
-    "supplierName":"Robin Ahmed",
-    "sold":125
+     "_id":"627606f20bd319b19fe45a73",
+     "name":"Apple",
+     "image":"https://res.cloudinary.com/john-mantas/image/upload/v1537291846/codepen/delicious-apples/green-apple-with-slice.png",
+     "description":"Apples are an incredibly nutritious fruit that offers multiple health benefits. They're rich in fiber and antioxidants",
+     "price":"$20",
+     "quantity":280,
+     "supplierName":"Robin Ahmed",
+     "sold":137
   },
   {
-    "name": "Cherry",
-    "image": "https://i.ibb.co/3d1fB4g/cherries-background-cherries-plant-fruit-food-cherry-transparent-png-290808-removebg-preview.png",
-    "description": "Cherries are classified as drupes, which are a subcategory of the fruit genus. Drupes, sometimes referred to as stone fruits",
-    "price":"$15",
-    "quantity":340,
-    "supplierName":"Shafik Mia",
-    "sold":225
+     "_id":"627606f20bd319b19fe45a85",
+     "name":"Pear",
+     "image":"https://i.ibb.co/VD2FSsg/resize.webp",
+     "description":"Pears are a powerhouse fruit, packing fiber, vitamins, and beneficial plant compounds. These nutrients are thought to fight inflammation, promote gut and heart health, protect against certain diseases, and even aid weight loss",
+     "price":"$36",
+     "quantity":524,
+     "supplierName":"Rafta hossen",
+     "sold":325
   },
   {
-    "name": "Mango",
-    "image": "https://i.ibb.co/ZSGz68s/ripe-mango-isolated-on-white-260nw-1297537549-removebg-preview.png",
-    "description": "They are a great source of magnesium and potassium, both of which are connected to lower blood pressure and a regular pulse",
-    "price":"$18",
-    "quantity":540,
-    "supplierName":"Rafik Uddin",
-    "sold":375
+     "_id":"627606f20bd319b19fe45a74",
+     "name":"Cherry",
+     "image":"https://i.ibb.co/3d1fB4g/cherries-background-cherries-plant-fruit-food-cherry-transparent-png-290808-removebg-preview.png",
+     "description":"Cherries are classified as drupes, which are a subcategory of the fruit genus. Drupes, sometimes referred to as stone fruits",
+     "price":"$15",
+     "quantity":289,
+     "supplierName":"Shafik Mia",
+     "sold":236
   },
   {
-    "name": "Orange",
-    "image": "https://i.ibb.co/Ht19jss/05795a16b647118ffb6629390e995adb-removebg-preview.png",
-    "description": "They are a good source of vitamin C, as well as several other vitamins, minerals, and antioxidants.Protects your cells from damage",
-    "price":"$33",
-    "quantity":940,
-    "supplierName":"Taufik Islam",
-    "sold":643
+     "_id":"627606f20bd319b19fe45a79",
+     "name":"Banana",
+     "image":"https://i.ibb.co/Tr4cy95/istockphoto-173242750-170667a.jpg",
+     "description":"Bananas are a healthful addition to a balanced diet, as they provide a range of vital nutrients and are a good source of fiber",
+     "price":"$45",
+     "quantity":244,
+     "supplierName":"Liton Hassan",
+     "sold":124
   },
   {
-    "name": "Graps",
-    "image": "https://i.ibb.co/JCNcyKT/fresh-common-black-graps-108-w300-removebg-preview.png",
-    "description": "The nutrients in grapes may help protect against cancer, eye problems, cardiovascular disease, and other health conditions",
-    "price":"$45",
-    "quantity":470,
-    "supplierName":"Taki Hossein",
-    "sold":435
+     "_id":"627606f20bd319b19fe45a82",
+     "name":"Jackfruite",
+     "image":"https://i.ibb.co/qJ7zJc4/707-2-600x600.jpg",
+     "description":"Carotenoids, the pigments that give jackfruit its yellow color, are high in vitamin A. Like all antioxidants, carotenoids protect cells from damage and help your body work right",
+     "price":"$66",
+     "quantity":520,
+     "supplierName":"Rone uddin",
+     "sold":337
   },
   {
-    "name": "Watermelon",
-    "image": "https://i.ibb.co/93sp5Vb/132577049-single-whole-mini-watermelon-isolated-on-white-background-organic-and-fresh-picked-summer.png",
-    "description": "Watermelon is rich in an amino acid called citrulline that may help move blood through your body and can lower your blood pressure",
-    "price":"$65",
-    "quantity":94,
-    "supplierName":"Rifat Hassan",
-    "sold":41
+     "_id":"627606f20bd319b19fe45a7a",
+     "name":"Pineapple",
+     "image":"https://i.ibb.co/hfpHv02/vector-ripe-sliced-pineapple-fruit-isolated-white-background-1284-45474.webp",
+     "description":"The pineapple is a tropical plant with an edible fruit; it is the most economically significant plant in the family Bromeliaceae",
+     "price":"$65",
+     "quantity":274,
+     "supplierName":"Sakib Uddin",
+     "sold":134
+  },
+  {
+     "_id":"627606f20bd319b19fe45a88",
+     "name":"Fig ",
+     "image":"https://i.ibb.co/dLq922Z/dry-fig-turkish-small-550x550-jpg.webp",
+     "description":"They are an excellent source of prebiotics, which improve overall gut health. Figs are a good source of both calcium and potassium. These minerals can work together to improve bone density, which can, in turn, prevent conditions like osteoporosis",
+     "price":"$51",
+     "quantity":290,
+     "supplierName":"Titu Islam",
+     "sold":75
+  },
+  {
+     "_id":"627606f20bd319b19fe45a7e",
+     "name":"Coconut",
+     "image":"https://i.ibb.co/gTh57gV/coconut-white-balsamic-condimento.jpg",
+     "description":"Rich in fiber and MCTs, it may offer a number of benefits, including improved heart health, weight loss, and digestion. Yet, it's high in calories and saturated fat, so you should eat it in moderation",
+     "price":"$465",
+     "quantity":274,
+     "supplierName":"Pranto sheikh",
+     "sold":159
+  },
+  {
+     "_id":"627606f20bd319b19fe45a7d",
+     "name":"Avocado",
+     "image":"https://i.ibb.co/Xx9LdLp/istockphoto-1156379587-612x612.jpg",
+     "description":"Avocados are high in fat with 60 per cent of this being monounsaturated fats, which research suggests helps to protect against heart disease and lower blood pressure",
+     "price":"$22",
+     "quantity":44,
+     "supplierName":"Miraj salehin",
+     "sold":29
+  },
+  {
+     "_id":"627606f20bd319b19fe45a89",
+     "name":"Grapfruite ",
+     "image":"https://i.ibb.co/hWt5vzZ/grapefruit-isolated-on-white-background-260nw-1048410931.jpg",
+     "description":"Grapefruits have many health benefits. From the peel to the pulp, right down to the juices, grapefruit contains vitamins and minerals that can aid in weight loss",
+     "price":"$86",
+     "quantity":1954,
+     "supplierName":"Ridoy Khan",
+     "sold":456
+  },
+  {
+     "_id":"627606f20bd319b19fe45a7c",
+     "name":"Strawberry",
+     "image":"https://i.ibb.co/1rB9f2Z/strawberry-500x500.jpg",
+     "description":"The tiny strawberry is packed with vitamin C, fiber, antioxidants, and more. The heart-shaped silhouette of the strawberry is the first clue that this fruit is good for you",
+     "price":"$165",
+     "quantity":374,
+     "supplierName":"Rafik Uddin",
+     "sold":259
+  },
+  {
+     "_id":"627606f20bd319b19fe45a78",
+     "name":"Watermelon",
+     "image":"https://i.ibb.co/93sp5Vb/132577049-single-whole-mini-watermelon-isolated-on-white-background-organic-and-fresh-picked-summer.png",
+     "description":"Watermelon is rich in an amino acid called citrulline that may help move blood through your body and can lower your blood pressure",
+     "price":"$65",
+     "quantity":94,
+     "supplierName":"Rifat Hassan",
+     "sold":41
+  },
+  {
+     "_id":"627606f20bd319b19fe45a87",
+     "name":"Cranberry ",
+     "image":"https://i.ibb.co/YTNtgxZ/33731385-cranberry-isolated.webp",
+     "description":"Many people consider cranberries to be a superfood due to their high nutrient and antioxidant content. In fact, research has linked the nutrients in cranberries to a lower risk of urinary tract infection (UTI)",
+     "price":"$46",
+     "quantity":279,
+     "supplierName":"Shafik Uddin",
+     "sold":45
+  },
+  {
+     "_id":"627606f20bd319b19fe45a75",
+     "name":"Mango",
+     "image":"https://i.ibb.co/ZSGz68s/ripe-mango-isolated-on-white-260nw-1297537549-removebg-preview.png",
+     "description":"They are a great source of magnesium and potassium, both of which are connected to lower blood pressure and a regular pulse",
+     "price":"$18",
+     "quantity":540,
+     "supplierName":"Rafik Uddin",
+     "sold":375
+  },
+  {
+     "_id":"627606f20bd319b19fe45a76",
+     "name":"Orange",
+     "image":"https://i.ibb.co/Ht19jss/05795a16b647118ffb6629390e995adb-removebg-preview.png",
+     "description":"They are a good source of vitamin C, as well as several other vitamins, minerals, and antioxidants.Protects your cells from damage",
+     "price":"$33",
+     "quantity":940,
+     "supplierName":"Taufik Islam",
+     "sold":643
+  },
+  {
+     "_id":"627606f20bd319b19fe45a83",
+     "name":"Lime",
+     "image":"https://i.ibb.co/VqwDc7j/lime-persian-large.jpg",
+     "description":"Limes are high in vitamin C and antioxidants — both of which may offer health benefits. Eating limes or drinking the juice may improve immunity, reduce heart disease risk factors, prevent kidney stones, aid iron absorption, and promote healthy skin",
+     "price":"$56",
+     "quantity":260,
+     "supplierName":"Didarul Mia",
+     "sold":136
+  },
+  {
+     "_id":"627606f20bd319b19fe45a80",
+     "name":"Apricot",
+     "image":"https://i.ibb.co/rMqZ1CK/apricot.jpg",
+     "description":"Rich in vitamin A, beta-carotene, and other carotenoids, apricots are excellent for promoting eye health. Lutein helps to support retina and lens health, while carotenoids and vitamin E support overall vision.",
+     "price":"$36",
+     "quantity":1020,
+     "supplierName":"Riaj uddin",
+     "sold":694
+  },
+  {
+     "_id":"627606f20bd319b19fe45a86",
+     "name":"Dragon",
+     "image":"https://i.ibb.co/tbSP712/dragon-fruit-per-kg.jpg",
+     "description":"dragon fruit is safe to eat and offers many health benefits due to its vitamin C and antioxidant properties. The fruit is low in calories, making it a perfect everyday snack",
+     "price":"$76",
+     "quantity":220,
+     "supplierName":"Ratul Islam",
+     "sold":136
+  },
+  {
+     "_id":"627606f20bd319b19fe45a7f",
+     "name":"Papayas",
+     "image":"https://i.ibb.co/NKxDD1g/U09683472a6de4ebab95f1ae131f0c958v.jpg",
+     "description":"Papayas contain high levels of antioxidants vitamin A, vitamin C, and vitamin E. Diets high in antioxidants may reduce the risk of heart disease",
+     "price":"$65",
+     "quantity":94,
+     "supplierName":"Tonmoy Ahmed",
+     "sold":36
+  },
+  {
+     "_id":"627606f20bd319b19fe45a81",
+     "name":"Kiwi",
+     "image":"https://i.ibb.co/vhwH919/Kiwi-fruits-582a07b.jpg",
+     "description":"Kiwis are high in Vitamin C and dietary fiber and provide a variety of health benefits. This tart fruit can support heart health, digestive health, and immunity. The kiwi is a healthy choice of fruit and is rich with vitamins and antioxidants",
+     "price":"$76",
+     "quantity":920,
+     "supplierName":"Suhel Ahmed",
+     "sold":594
+  },
+  {
+     "_id":"627606f20bd319b19fe45a77",
+     "name":"Graps",
+     "image":"https://i.ibb.co/JCNcyKT/fresh-common-black-graps-108-w300-removebg-preview.png",
+     "description":"The nutrients in grapes may help protect against cancer, eye problems, cardiovascular disease, and other health conditions",
+     "price":"$45",
+     "quantity":470,
+     "supplierName":"Taki Hossein",
+     "sold":435
+  },
+  {
+     "_id":"627606f20bd319b19fe45a7b",
+     "name":"Pomegranate",
+     "image":"https://i.ibb.co/1J9nfMS/fresh-ripe-pomegranate-green-leaves-260nw-1291478515.jpg",
+     "description":"Pomegranates are rich in antioxidants and flavonoids, both of which are known to prevent free radicals from damaging your cells. In some studies, pomegranates show potential to be effective in preventing prostate, breast, lung, and colon cancers",
+     "price":"$125",
+     "quantity":454,
+     "supplierName":"Tamim hossein",
+     "sold":364
+  },
+  {
+     "_id":"627606f20bd319b19fe45a84",
+     "name":"Peache",
+     "image":"https://i.ibb.co/tBKtjB7/peach-fruit-leaf-isolated-on-260nw-1911868798.jpg",
+     "description":"Since peaches are so sweet, they're a bit higher in fructose (sugar) than some other fruits, which also means they're considered a high-FODMAP food",
+     "price":"$94",
+     "quantity":320,
+     "supplierName":"Taufik uddin",
+     "sold":266
+  },
+  {
+     "_id":"627606f20bd319b19fe45a8a",
+     "name":"KumQuat ",
+     "image":"https://i.ibb.co/y5nqdfb/stock-photo-ripe-kumquat-fruits-isolated-on-white-background-250nw-1859931868.jpg",
+     "description":"dragon fruit is safe to eat and offers many health benefits due to its vitamin C and antioxidant properties. The fruit is low in calories, making it a perfect everyday snack",
+     "price":"$126",
+     "quantity":650,
+     "supplierName":"Talha Islam",
+     "sold":412
   }
 ]
