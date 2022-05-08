@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Orgafresh Fruites
+***
+## Live Website Link : https://orgafresh-fruites.web.app/home
+***
+### A list of work how make this website:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Home page : First on the website,There is a homepage.There is a navber, picture and some text in the homepage.When you scroll the website,A inventory section will appear.There are six products behind this section.The name of the fruite name,picture,price,description,supplier name,quantity have been tweaked.Clicking on the stock update button will take you to the inventory/id page.Inventory/id page appear fruite name,picture,price,description,supplier name,quantity, deliverd button, restock button. delivered button click quantiy item one minus and sold item one plus. Restock button click than show input filed and update stock button. Clicking update stock button update a quantity item.
 
-## Available Scripts
+* Manage Item page : Manage Item route click then show furite will appera by react bootstrap table.This is page shows fruite name,picture,price,description,supplier name,quantity and delete button. Clicking on the delete button item is remove manage item and inventory page.
 
-In the project directory, you can run:
+* Add Item page : Add Item route click then show a from and add item button. Add item butto clicking the from write item add inventory section and My item page.
 
-### `npm start`
+* My Item page : My Item route click then show My adding item will appear by react bootstrap table.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Blogs page : There are three questions and answers in the blog page.The questions are Difference between javascript and nodejs?, When should you use nodejs and when should you use mongodb?, Differences between sql and nosql databases?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Register and Login page : In the Register page there are three input in this page name,email,password,Register button and google singUp,github singup button.In the Login page there are two input in this page email,password,Login button and google singUp,github singup button.
 
-### `npm test`
+* Error Message : If you go to a page other than the home,Manage Itme,Add Item,My Item,Blog page. it will show you an error message.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technology and library usage :
+* bootstrap
+* firebase
+* react-toastify
+* react-bootstrap
+* react-dom
+* react-firebase-hooks
+* react-leaflet
+* react-router-dom
+* react-spinners

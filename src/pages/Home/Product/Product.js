@@ -43,7 +43,7 @@ const Product = ({ product }) => {
                         <h3 className={style.title_style}>BENEFITS</h3>
                         <p className={style.product_description}>{product.description.slice(0, 120)}</p>
                     </div>
-                    <button onClick={() => navigate(`/inventory/${product._id}`)} className={style.buy__btn}>MANAGE TO STOCK</button>
+                    <button onClick={() => navigate(`/inventory/${product._id}`)} className={style.buy__btn}>STOCK UPDATE</button>
                 </div>
             </section>
         </div>
