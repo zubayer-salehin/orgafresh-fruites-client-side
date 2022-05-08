@@ -86,6 +86,17 @@ const FruiteDetail = () => {
                 .then(data => {
                     setGetInputUpdateQuantity(totalQuantity + 1);
                 })
+                
+            fetch(`https://immense-tundra-86422.herokuapp.com/myItem?email=${email}&name=${name}`, {
+                method: 'PUT',
+                body: JSON.stringify(user),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                }
+            })
+                .then(res => res.json())
+                .then(data => console.log(data))
+
             handleClose()
         } else {
             toast.warn("please enter a quantity number");
@@ -128,7 +139,7 @@ const FruiteDetail = () => {
                         <div className='mt-3 fruite-text-color'>
                             <small>DESCRIPTION : </small>
                         </div>
-                        <p className='mt-1'>{fruite.description}</p>
+                        <p className='mt-1'>{fruite.description.slice(0, 152)}</p>
                         <button onClick={() => handleDelivered(fruite.email, fruite.name)} className='button delivered mb-4 me-5' type='button'>Delivered</button>
                         <div className='d-inline'>
                             <button onClick={handleShow} className='delivered restock bg-success' type='button'>Restock</button>
