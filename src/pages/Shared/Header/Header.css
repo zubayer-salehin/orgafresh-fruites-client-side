@@ -27,3 +27,8 @@
     background-color: #cdeea6;
     background-size: 100%;
 }
+
+.fs-15px-fw-500{
+    font-size:15px;
+    font-weight:500;
+}

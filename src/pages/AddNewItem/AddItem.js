@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useFruites from '../Hooks/useFruites';
+import Footer from '../Shared/Footer/Footer';
 
 
 const AddEvent = () => {
@@ -53,15 +54,16 @@ const AddEvent = () => {
                 .then(data => {
                     console.log('Success:', data);
                 })
-            e.target.reset();    
-            toast.success("Added Successfully");    
+            e.target.reset();
+            toast.success("Added Successfully");
         } else {
             toast.warn("Fruite Name is Already Exists");
         }
     }
 
     return (
-        <div className='d-flex justify-content-center'>
+        <>
+        <div className='d-flex justify-content-center pt-1 pb-2'>
             <div style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }} className='my-4 px-5 py-4 rounded'>
                 <h2 className='text-center pb-2'>Add Fruite Item</h2>
                 <form className=' mt-3' onSubmit={handleAddNewItem}>
@@ -93,7 +95,7 @@ const AddEvent = () => {
                     </Row>
                     <Row>
                         <div className='px-0 mb-3'>
-                            <textarea style={{ outline: "none", border: "1px solid #e5e5e5" }} className='p-3 rounded' name="description" cols="75" rows="4" placeholder='Fuite Description'></textarea>
+                            <textarea style={{ outline: "none", border: "1px solid #e5e5e5" }} className='p-3 rounded' name="description" cols="75" rows="4" placeholder='Fuite Description Must be 25 words' required></textarea>
                         </div>
                     </Row>
                     <div className='text-center'>
@@ -102,6 +104,8 @@ const AddEvent = () => {
                 </form>
             </div>
         </div>
+        <Footer></Footer>
+      </>  
     );
 };
 

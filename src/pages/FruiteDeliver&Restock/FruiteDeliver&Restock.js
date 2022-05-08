@@ -3,31 +3,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import "./FruiteDeliver&Restock.css";
-
-
 import { Button, Form, Modal } from 'react-bootstrap';
-
+import Loading from '../Shared/Loading/Loading';
+import { toast } from 'react-toastify';
+import Footer from "../Shared/Footer/Footer"
 
 const FruiteDetail = () => {
 
     const { id } = useParams();
     const [fruite, setFruite] = useState({});
     const [updateQuantity, setUpdateQuantity] = useState(0);
-
-
     const [show, setShow] = useState(false);
     const [addQuantity, setAddQuantity] = useState(0);
     const [getInputUpdateQuantity, setGetInputUpdateQuantity] = useState(0);
+    const [loading, setLoading] = useState(true);
 
 
     useEffect(() => {
+        setLoading(true);
         fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`)
             .then(res => res.json())
-            .then(data => setFruite(data))
+            .then(data => {
+                setFruite(data)
+                setLoading(false);
+            })
     }, [id, updateQuantity, getInputUpdateQuantity])
 
 
-    const handleDelivered = () => {
+    const handleDelivered = (email, name) => {
 
         const quantityDecrease = fruite.quantity - 1
         const soldIncrease = fruite.sold + 1
@@ -46,13 +49,23 @@ const FruiteDetail = () => {
             .then(data => {
                 setUpdateQuantity(updateQuantity + 1);
             })
+
+        fetch(`https://immense-tundra-86422.herokuapp.com/myItem?email=${email}&name=${name}`, {
+            method: 'PUT',
+            body: JSON.stringify(user),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            }
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
     }
 
     const handleClose = () => {
         setShow(false)
     };
 
-    const handleQuantity = () => {
+    const handleQuantity = (email, name) => {
 
         if (addQuantity) {
 
@@ -61,6 +74,7 @@ const FruiteDetail = () => {
                 quantity: totalQuantity,
                 sold: fruite.sold
             }
+
             fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify(user),
@@ -68,22 +82,21 @@ const FruiteDetail = () => {
                     'Content-type': 'application/json; charset=UTF-8',
                 }
             })
-            .then(res => res.json())
-            .then(data => {
-                setGetInputUpdateQuantity(totalQuantity + 1);
-            }) 
+                .then(res => res.json())
+                .then(data => {
+                    setGetInputUpdateQuantity(totalQuantity + 1);
+                })
             handleClose()
         } else {
-            alert("please enter a quantity number");
+            toast.warn("please enter a quantity number");
         }
     }
 
     const handleShow = () => setShow(true);
 
 
-
-    return (
-        <div>
+    return (loading ? <Loading loadingStatus="true"></Loading> :
+        <>
             <div className='fruite-container'>
                 <div className="d-flex align-items-center rounded fruite-wrapper">
                     <div className="fruite-image">
@@ -116,7 +129,7 @@ const FruiteDetail = () => {
                             <small>DESCRIPTION : </small>
                         </div>
                         <p className='mt-1'>{fruite.description}</p>
-                        <button onClick={handleDelivered} className='button delivered mb-4 me-5' type='button'>Delivered</button>
+                        <button onClick={() => handleDelivered(fruite.email, fruite.name)} className='button delivered mb-4 me-5' type='button'>Delivered</button>
                         <div className='d-inline'>
                             <button onClick={handleShow} className='delivered restock bg-success' type='button'>Restock</button>
 
@@ -137,7 +150,7 @@ const FruiteDetail = () => {
                                     </Form>
                                 </Modal.Body>
                                 <Modal.Footer>
-                                    <Button variant="success" onClick={handleQuantity}>
+                                    <Button variant="success" onClick={() => handleQuantity(fruite.email, fruite.name)}>
                                         Update Quantity
                                     </Button>
                                 </Modal.Footer>
@@ -146,7 +159,8 @@ const FruiteDetail = () => {
                     </div>
                 </div>
             </div>
-        </div>
+            <Footer></Footer>
+        </>
     );
 };
 

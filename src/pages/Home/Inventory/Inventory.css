@@ -10,3 +10,44 @@
   margin-left: 20px;
   gap: 75px;
 }
+
+.pagination button{
+   margin-right:15px;
+   border:1px solid #2196f3;
+   width:32px;
+   height:38px;
+   background-color: white;
+   font-weight: 500;
+   color:#2196f3;
+   outline: none;
+}
+
+.pagination .selected{
+  background-color: #2196f3;
+  color:white;
+  border-color: #2196f3;
+}
+
+#prevNextBtn{
+  background-color: white;
+  width: 55px;
+  height:40px;
+  color: #2196f3;
+  border: none;
+  border:1px solid #2196f3;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+#prevNextBtn:hover{
+  background-color: #2196f3;
+  color: white;
+}
+
+.invetoryBtn{
+  border:none;
+  color:white;
+  background-color: #87c140;
+  border-radius: 3px;
+  font-weight: 500;
+}

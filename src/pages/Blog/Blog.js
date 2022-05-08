@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Shared/Footer/Footer';
 
 const Blog = () => {
 
@@ -12,6 +13,7 @@ const Blog = () => {
     return (
         <div className='my-5 text-center'>
             <button onClick={handleDeleteAllData} className='button'>Delete</button>
+            <Footer></Footer>
         </div>
     );
 };

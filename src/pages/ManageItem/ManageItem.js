@@ -4,23 +4,27 @@ import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Footer from '../Shared/Footer/Footer';
+import Loading from '../Shared/Loading/Loading';
 import "./ManageItem.css";
 
 const ManageItem = () => {
 
     const [fruites, setFruites] = useState([]);
     const [deleteId, setDeleteId] = useState("");
+    const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
     let index = 0;
 
     useEffect(() => {
+        setLoading(true);
         fetch("https://immense-tundra-86422.herokuapp.com/fruites")
             .then(res => res.json())
             .then(data => {
                 setFruites(data)
+                setLoading(false);
             })
     }, [deleteId])
-
 
     const handleDeleteItem = (id, email, name) => {
         const confirmBox = window.confirm("Are you sure you want to delete?");
@@ -37,14 +41,14 @@ const ManageItem = () => {
             })
                 .then(res => res.json())
                 .then(data => console.log(data))
-            toast.success(`${name} Successfully Deleted`)    
+            toast.success(`${name} Successfully Deleted`)
         } else {
             toast.info("Thank you for not Deleted")
         }
     }
 
 
-    return (
+    return (loading ? <Loading loadingStatus="true"></Loading> :
         <div>
             <h1 className='mt-4 text-center mb-0'>Manage Inventories Item</h1>
             <Container>
@@ -77,6 +81,7 @@ const ManageItem = () => {
                     </tbody>
                 </Table>
             </Container>
+            <Footer></Footer>
         </div>
     );
 };

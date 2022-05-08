@@ -42,7 +42,7 @@ const Product = ({ product }) => {
                     </div>
                     <div className={style.description}>
                         <h3 className={style.title_style}>BENEFITS</h3>
-                        <p className='pe-2'>{product.description}</p>
+                        <p className='pe-2'>{product.description.slice(0,120)}</p>
                     </div>
                     <button onClick={() => navigate(`/inventory/${product._id}`)} className={style.buy__btn}>MANAGE TO STOCK</button>
                 </div>
