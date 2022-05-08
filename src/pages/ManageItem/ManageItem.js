@@ -50,12 +50,12 @@ const ManageItem = () => {
 
     return (loading ? <Loading loadingStatus="true"></Loading> :
         <div>
-            <h1 className='mt-4 text-center mb-0'>Manage Inventories Item</h1>
-            <Container>
+            <h1 className='mt-4 text-center manage-title'>Manage Inventories Item</h1>
+            <div className='manage-container'>
                 <div className='text-end'>
                     <button onClick={() => navigate("/addItem")} className='add-item-btn border-0 mb-4 text-light py-2 fw-500 px-4 rounded'><FontAwesomeIcon className='delete-icon' icon={faCirclePlus}></FontAwesomeIcon>Add New Item</button>
                 </div>
-                <Table bordered className='text-center'>
+                <Table bordered responsive className='text-center'>
                     <thead>
                         <tr>
                             <th>#</th>
@@ -80,7 +80,7 @@ const ManageItem = () => {
                         )}
                     </tbody>
                 </Table>
-            </Container>
+            </div>
             <Footer></Footer>
         </div>
     );

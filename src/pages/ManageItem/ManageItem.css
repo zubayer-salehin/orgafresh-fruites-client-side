@@ -30,3 +30,27 @@
 .add-item-btn{
     background-color: #29b81c;
 }
+
+.manage-container{
+    width:1140px;
+    margin:0 auto;
+}
+
+.manage-title{
+    margin-bottom: 0px;
+}
+
+@media (max-width: 576px) {
+    /* .container{
+        width:100% !important;
+    } */
+
+    .manage-container{
+        width:400px;
+        margin:0 auto;
+    }
+
+    .manage-title{
+        margin-bottom: 20px;
+    }
+}

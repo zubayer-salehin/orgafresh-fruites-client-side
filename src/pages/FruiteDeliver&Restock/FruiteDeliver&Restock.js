@@ -98,15 +98,15 @@ const FruiteDetail = () => {
     return (loading ? <Loading loadingStatus="true"></Loading> :
         <>
             <div className='fruite-container'>
-                <div className="d-flex align-items-center rounded fruite-wrapper">
+                <div className="fruite-wrapper fruite-wrapper">
                     <div className="fruite-image">
                         <img src={fruite.image} alt="" />
                     </div>
-                    <div className="fruite-info ps-4 pe-3">
+                    <div className="fruite-info">
                         <div className='mt-3 fruite-text-color'>
                             <small>Id : {fruite._id}</small>
                         </div>
-                        <h2 className='fruite-title-color mt-1 mb-3'>{fruite.name}</h2>
+                        <h2 className='fruite-title-color mt-1'>{fruite.name}</h2>
                         <h2 className='fruite-price'><span className='fs-6 me-2'>Rs</span>{fruite.price}</h2>
                         <div className='mt-3 mb-3 fruite-text-color'>
                             <small>SUPPLY & QUANTITY & SOLD :</small>

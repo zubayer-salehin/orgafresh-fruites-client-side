@@ -1,12 +1,13 @@
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
-import { Container, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 import Footer from "../Shared/Footer/Footer"
+import "./MyItem.css";
 
 const MyItem = () => {
 
@@ -54,8 +55,8 @@ const MyItem = () => {
     <>
         <div className='mb-5'>
             <h1 className='text-center my-3 pb-2'>My Item</h1>
-            <Container>
-                <Table bordered className='text-center'>
+            <div className='my-item-container'>
+                <Table responsive bordered className='text-center'>
                     <thead>
                         <tr>
                             <th>#</th>
@@ -80,7 +81,7 @@ const MyItem = () => {
                         )}
                     </tbody>
                 </Table>
-            </Container>
+            </div>
         </div >
         <Footer></Footer>
     </>    

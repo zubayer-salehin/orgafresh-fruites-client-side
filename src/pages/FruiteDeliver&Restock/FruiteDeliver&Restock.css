@@ -4,8 +4,11 @@
 }
 
 .fruite-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
     width: 55%;
-    margin:37px 0px;
+    margin:26px 0px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -14,7 +17,9 @@
 }
 
 .fruite-info {
-    width: 60%
+    width: 60%;
+    padding-left:1.5rem;
+    padding-right:1rem;
 }
 
 .fruite-text-color {
@@ -24,6 +29,7 @@
 .fruite-title-color {
     color: #403f3f;
     font-size: 40px;
+    margin-bottom:12px;
 }
 
 .te-ge {
@@ -55,4 +61,31 @@
     color:white;
     border-radius: 2px;
     font-weight: 500;
+}
+
+@media (max-width: 576px) {
+    .fruite-container {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .fruite-wrapper{
+        display: flex;
+        flex-direction: column;
+        width:375px;
+        margin-left:19px;
+        margin-right:19px;
+    }
+
+    .fruite-image {
+        width: 100%
+    }
+
+    .fruite-info {
+        width: 85%;
+        padding-left:0.25rem;
+        padding-right:0.25rem;
+        margin-bottom: 1rem;
+    }
 }

@@ -1,0 +1,11 @@
+.my-item-container{
+    width:1140px;
+    margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+    .my-item-container{
+        width:400px;
+        margin: 0 auto;
+    }
+}

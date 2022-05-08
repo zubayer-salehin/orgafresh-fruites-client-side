@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import style from "./Product.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShieldVirus, faTruck } from '@fortawesome/free-solid-svg-icons'
