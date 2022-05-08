@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Footer.css";
 
 const Footer = () => {
 
     const year = new Date().getFullYear();
+    const [email,setEmail] = useState("");
+
+    const handleInfoSubmit = () => {
+        setEmail("")
+    }
 
     return (
         <footer style={{background:"black"}}>
@@ -36,9 +41,9 @@ const Footer = () => {
                         <p className="text-light mb-4">Be the first to know about exciting our food collection. Special foods and much more.</p>
                         <div className="rounded">
                             <div className="input-group">
-                                <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" className="form-control border-0 shadow-0"/>
+                                <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Enter your email address" aria-describedby="button-addon1" className="form-control border-0 shadow-0" value={email}/>
                                     <div className="input-group-append">
-                                        <button className='button' type="submit">Submit</button>
+                                        <button onClick={handleInfoSubmit} className='button' >Submit</button>
                                     </div>
                             </div>
                         </div>
