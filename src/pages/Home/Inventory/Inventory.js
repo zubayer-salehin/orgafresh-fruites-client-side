@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../../Shared/Loading/Loading';
 import Product from '../Product/Product';
 import "./Inventory.css";
 
@@ -8,14 +9,17 @@ const Inventory = () => {
     const [fruites, setFruites] = useState([]);
     const navigate = useNavigate();
     const [pageCount, setPageCount] = useState(0);
+    const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(0);
     const size = 6;
 
     useEffect(() => {
+        setLoading(true);
         fetch(`https://immense-tundra-86422.herokuapp.com/fruites?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setFruites(data)
+                setLoading(false);
             })
     }, [page, size])
 
@@ -41,7 +45,7 @@ const Inventory = () => {
     }
 
 
-    return (
+    return ( loading ? <Loading loadingStatus="true"></Loading> :
         <div id='Inventory'>
             <h1 className='my-5 pt-3 pb-1 text-center'>Our Inventory</h1>
             <Container className='mb-4'>
