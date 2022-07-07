@@ -7,10 +7,8 @@ import "./Inventory.css";
 import { useQuery } from 'react-query';
 
 const Inventory = () => {
-    // const [fruites, setFruites] = useState([]);
     const navigate = useNavigate();
     const [pageCount, setPageCount] = useState(0);
-    // const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(0);
     const size = 6;
 
@@ -22,16 +20,6 @@ const Inventory = () => {
                 setPageCount(pageNumber)
             })
     }, [])
-
-    // useEffect(() => {
-    //     setLoading(true);
-    //     fetch(`https://immense-tundra-86422.herokuapp.com/fruites?page=${page}&size=${size}`)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setFruites(data)
-    //             setLoading(false);
-    //         })
-    // }, [page, size])
 
     const { data: fruites, isLoading, refetch } = useQuery([page, size], () => fetch(`https://immense-tundra-86422.herokuapp.com/fruites?page=${page}&size=${size}`)
         .then(res => res.json())
@@ -68,9 +56,9 @@ const Inventory = () => {
                 <div className='d-block pt-3 text-center'>
                     <button id='prevNextBtn' onClick={handlePreviou} className='prevBtn'>Prev</button>
                     <div className='pagination d-inline'>
-                        {[...Array(pageCount).keys()].map(number => <button
+                        {[...Array(pageCount).keys()].map((number,index) => <button
                             onClick={() => setPage(number)} className={page === number ? "selected" : ""}
-                            key={Math.random * 10000}>{number + 1}</button>)}
+                            key={index}>{number + 1}</button>)}
                     </div>
                     <button onClick={handleNext} id='prevNextBtn' className='nextBtn'>Next</button>
                 </div>

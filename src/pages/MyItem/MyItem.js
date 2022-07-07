@@ -16,10 +16,10 @@ const MyItem = () => {
     const [fruiteName, setFruiteName] = useState("");
     const [loading, setLoading] = useState(true);
     let index = 0;
-
+    
     useEffect(() => {
         setLoading(true);
-        const email = user.email
+        const email = user?.email;
         fetch(`https://immense-tundra-86422.herokuapp.com/myItem?email=${email}`)
             .then(res => res.json())
             .then(data => {
