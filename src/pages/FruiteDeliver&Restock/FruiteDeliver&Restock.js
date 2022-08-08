@@ -21,7 +21,7 @@ const FruiteDetail = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`)
+        fetch(`https://sleepy-waters-32923.herokuapp.com/fruites/${id}`)
             .then(res => res.json())
             .then(data => {
                 setFruite(data)
@@ -38,7 +38,7 @@ const FruiteDetail = () => {
             quantity: quantityDecrease,
             sold: soldIncrease
         }
-        fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`, {
+        fetch(`https://sleepy-waters-32923.herokuapp.com/fruites/${id}`, {
             method: 'PUT',
             body: JSON.stringify(user),
             headers: {
@@ -50,7 +50,7 @@ const FruiteDetail = () => {
                 setUpdateQuantity(updateQuantity + 1);
             })
 
-        fetch(`https://immense-tundra-86422.herokuapp.com/myItem?email=${email}&name=${name}`, {
+        fetch(`https://sleepy-waters-32923.herokuapp.com/myItem?email=${email}&name=${name}`, {
             method: 'PUT',
             body: JSON.stringify(user),
             headers: {
@@ -75,7 +75,7 @@ const FruiteDetail = () => {
                 sold: fruite.sold
             }
 
-            fetch(`https://immense-tundra-86422.herokuapp.com/fruites/${id}`, {
+            fetch(`https://sleepy-waters-32923.herokuapp.com/fruites/${id}`, {
                 method: 'PUT',
                 body: JSON.stringify(user),
                 headers: {
@@ -87,7 +87,7 @@ const FruiteDetail = () => {
                     setGetInputUpdateQuantity(totalQuantity + 1);
                 })
                 
-            fetch(`https://immense-tundra-86422.herokuapp.com/myItem?email=${email}&name=${name}`, {
+            fetch(`https://sleepy-waters-32923.herokuapp.com/myItem?email=${email}&name=${name}`, {
                 method: 'PUT',
                 body: JSON.stringify(user),
                 headers: {

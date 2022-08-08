@@ -20,7 +20,7 @@ const MyItem = () => {
     useEffect(() => {
         setLoading(true);
         const email = user?.email;
-        fetch(`https://immense-tundra-86422.herokuapp.com/myItem?email=${email}`)
+        fetch(`https://sleepy-waters-32923.herokuapp.com/myItem?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 console.log("success", data)
@@ -33,7 +33,7 @@ const MyItem = () => {
     const handleDeleteItem = (id, email, name) => {
         const confirmBox = window.confirm("Are you sure you want to delete?");
         if (confirmBox) {
-            fetch(`https://immense-tundra-86422.herokuapp.com/myItem/${id}`, {
+            fetch(`https://sleepy-waters-32923.herokuapp.com/myItem/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -41,7 +41,7 @@ const MyItem = () => {
                     setFruiteName(name);
                 })
 
-            fetch(`https://immense-tundra-86422.herokuapp.com/fruites?email=${email}&name=${name}`, {
+            fetch(`https://sleepy-waters-32923.herokuapp.com/fruites?email=${email}&name=${name}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

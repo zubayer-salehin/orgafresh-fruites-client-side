@@ -31,7 +31,7 @@ const AddEvent = () => {
             }
             console.log(addItemInfo);
 
-            fetch('https://immense-tundra-86422.herokuapp.com/fruites', {
+            fetch('https://sleepy-waters-32923.herokuapp.com/fruites', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const AddEvent = () => {
                     console.log('Success:', data);
                 })
 
-            fetch('https://immense-tundra-86422.herokuapp.com/myItem', {
+            fetch('https://sleepy-waters-32923.herokuapp.com/myItem', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

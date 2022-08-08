@@ -14,7 +14,7 @@ const Inventory = () => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        fetch("https://immense-tundra-86422.herokuapp.com/fruiteCount")
+        fetch("https://sleepy-waters-32923.herokuapp.com/fruiteCount")
             .then(res => res.json())
             .then(data => {
                 const pageNumber = Math.ceil(data.count / 6)
@@ -24,7 +24,7 @@ const Inventory = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://immense-tundra-86422.herokuapp.com/fruites?page=${page}&size=${size}`)
+        fetch(`https://sleepy-waters-32923.herokuapp.com/fruites?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setFruites(data)
