@@ -37,7 +37,6 @@ const Register = () => {
             const displayName = e.target.name.value;
             const email = e.target.email.value;
             const password = e.target.password.value;
-            console.log({ displayName, email, password, agree });
             await createUserWithEmailAndPassword(email, password)
             await updateProfile({ displayName })
         } else {
@@ -47,13 +46,12 @@ const Register = () => {
 
     if (user) {
         navigate("/home");
-        console.log(user);
     }
 
     return (
         <>
             <div className='d-flex justify-content-center'>
-                <div className='register-width px-5 py-4 mt-3 mb-4 form-shadow'>
+                <div className='register-width px-5 py-4 register-margin form-shadow'>
                     <h3 className='title mb-4 text-center'>Register</h3>
                     <form onSubmit={handleRegisterSubmit}>
                         <div className='position-relative input rounded'>

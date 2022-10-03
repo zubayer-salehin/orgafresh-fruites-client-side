@@ -4,83 +4,238 @@
   box-sizing: border-box;
 }
 
-.inventory-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-left: 20px;
-  gap: 75px;
-}
-
 .pagination button {
   margin-right: 15px;
-  border: 1px solid #2196f3;
+  border: 1px solid #84bd40;
   width: 32px;
   height: 38px;
   background-color: white;
   font-weight: 500;
-  color: #2196f3;
+  color: #84bd40;
   outline: none;
 }
 
 .pagination .selected {
-  background-color: #2196f3;
+  background-color: #84bd40;
   color: white;
-  border-color: #2196f3;
+  border-color: #84bd40;
 }
 
 #prevNextBtn {
   background-color: white;
   width: 55px;
   height: 40px;
-  color: #2196f3;
+  color: #84bd40;
   border: none;
-  border: 1px solid #2196f3;
+  border: 1px solid #84bd40;
   font-weight: 500;
   border-radius: 2px;
 }
 
 #prevNextBtn:hover {
-  background-color: #2196f3;
+  background-color: #84bd40;
   color: white;
 }
 
-.invetoryBtn {
-  border: none;
-  color: white;
-  background-color: #87c140;
-  border-radius: 3px;
-  font-weight: 500;
+.prevBtn {
+  margin-right: 48px;
 }
 
-.prevBtn{
-  margin-right:48px;
-}
-
-.nextBtn{
-  margin-left:24px;
+.nextBtn {
+  margin-left: 24px;
 }
 
 @media (max-width: 576px) {
-  .inventory-container {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 0px;
+
+  .prevBtn {
+    margin-right: 20px;
   }
 
-  .prevBtn{
-    margin-right:20px;
-  }
-
-  .nextBtn{
-    margin-left:14px;
+  .nextBtn {
+    margin-left: 14px;
   }
 
   .pagination button {
     margin-right: 8px;
   }
 
-  .container{
-    width:85%;
-    padding-right:0px;
+}
+
+/* Fruite CSS Start*/
+
+.fruiteName {
+  color: #4c4c4c;
+  font-size: 2.1em;
+  font-weight: 900;
+  margin-bottom: 0.1em;
+}
+
+.fruitePrice {
+  color: #ff3f40;
+  font-size: 0.9em;
+  margin: 0.8rem 0;
+  font-weight: 400;
+}
+
+.fruiteSymbol {
+  font-size: 2.2em;
+  padding-left: 0.15em;
+}
+
+.fruiteMiniTitle {
+  color: #a6a6a6;
+  font-size: .7em;
+  letter-spacing: 1.2px;
+  margin-bottom: 1em;
+}
+
+.supplierName {
+  font-size: 0.9rem;
+  margin: 0px 0px 0.5rem 0px;
+}
+
+.supplierInfo {
+  font-size: 1.1rem;
+  margin: 0px 0px 0.5rem 0px;
+}
+
+.supplierAndQuantityContainer {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 1em;
+}
+
+.fruiteImage {
+  max-width: 100%;
+}
+
+.iconColor {
+  color: #ff3f40;
+}
+
+.stockUpdateBtn {
+  background-color: #ff3f40;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 2px 2px 25px -7px #4c4c4c;
+  color: #fff;
+  cursor: pointer;
+  font-size: .8em;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  padding: 1.5em 3em;
+  text-transform: uppercase;
+}
+
+.fruite {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
+  display: grid;
+  grid-template-columns: .8fr 1fr;
+  padding: 2.5em 0;
+  gap: 25px;
+  margin-left: 35px
+}
+
+.fruiteImageContainer {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 4px 4px 25px -2px rgb(0 0 0 / 30%);
+  margin-left: -35px
+}
+
+.fruiteContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 100px;
+  column-gap: 65px;
+}
+
+.fruiteDescription {
+  font-size: 14px;
+  padding-right: 6px;
+}
+
+@media only screen and (max-width: 576px) {
+
+  .fruiteContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .fruite {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap: 15px;
+    margin-left: 35px
+  }
+
+  .fruiteName {
+    color: #4c4c4c;
+    font-size: 1.7em;
+    font-weight: 900;
+    margin-bottom: 0.1em;
+  }
+
+  .fruitePrice {
+    color: #ff3f40;
+    font-size: 0.7em;
+    margin: 0.8rem 0;
+    font-weight: 400;
+  }
+
+  .fruiteSymbol {
+    font-size: 2em;
+    padding-left: 0.15em;
+  }
+
+  .supplierName {
+    font-size: 0.7rem;
+  }
+
+  .supplierInfo {
+    font-size: 0.9rem;
+  }
+
+  .fruiteMiniTitle {
+    font-size: .5em;
+  }
+
+  .stockUpdateBtn {
+    font-size: .6em;
+    padding: 1.4em 2.8em;
+  }
+
+  .fruiteDescription {
+    font-size: 13px;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  .supplierName {
+    font-size: 0.6rem;
+  }
+
+  .supplierInfo {
+    font-size: 0.8rem;
+  }
+
+  .supplierAndQuantityContainer {
+    gap: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+  .fruite {
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+    gap: 15px;
+    margin-left: 35px
   }
 
 }

@@ -1,0 +1,52 @@
+.aboutUsTitle {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.aboutUsDescription {
+    margin-right: 19%;
+    font-size: 14px;
+}
+
+.aboutUsImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutUsDesc {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.flexGap {
+    gap: 20px;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.titleLine::before {
+    content: "";
+    background: rgb(135, 193, 64);
+    height: 5px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(63px);
+    border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+
+    .aboutUsTitle {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .aboutUsDescription {
+        margin-right: 0px;
+    }
+}

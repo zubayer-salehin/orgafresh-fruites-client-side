@@ -40,7 +40,9 @@ const ManageItem = () => {
                 method: "DELETE"
             })
                 .then(res => res.json())
-                .then(data => console.log(data))
+                .then(data => {
+
+                })
             toast.success(`${name} Successfully Deleted`)
         } else {
             toast.info("Thank you for not Deleted")

@@ -1,20 +1,25 @@
-.social-icon img{
-    width:25px;
-    height:25px;
+.social-icon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 22px;
+    height: 22px;
     margin-right: 10px;
 }
 
-.google{
-    padding:6px 15px;
+.google {
+    padding: 6px 13px;
     border: 1px solid #717070;
     background-color: white;
     outline: none;
-    margin-right:12px;
     font-weight: 500;
 }
 
-.github{
-    padding:6px 15px;
+.github {
+    padding: 6px 13px;
     border: 1px solid #717070;
     outline: none;
     background-color: white;

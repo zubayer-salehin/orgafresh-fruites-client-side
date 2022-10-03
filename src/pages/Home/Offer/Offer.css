@@ -1,0 +1,119 @@
+.offer {
+    background-image: url("/src/images/bg3-1.jpg");
+    background-position: 0 0 !important;
+    background-repeat: no-repeat !important;
+}
+
+.titlePadding {
+    padding-top: 60px;
+    padding-bottom: 15px;
+}
+
+.timeDescription {
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.timeMainContainer {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.timeContainer {
+    width: 132px;
+    height: 130px;
+    text-align: center;
+    padding: 16px 32px;
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+.timeDegine {
+    font-size: 40px;
+    width: 45.27px;
+    height: 53px;
+    font-weight: 500;
+    color: white;
+}
+
+.timeTextDegine {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+.foodMunuContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+
+.foodMunuContainer div img {
+    max-width: 100%;
+}
+
+.offerFoodPadddingTop {
+    padding-top: 70px;
+}
+
+.offerBadge {
+    padding: 10px 15px !important;
+    color: white !important;
+    font-weight: 500 !important;
+    background-color: #222222 !important;
+    font-size: 14px !important;
+}
+
+.specialOfferBadgeColor {
+    background-color: #88c000 !important;
+}
+
+.item-container {
+    position: relative;
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+}
+
+.item-information {
+    opacity: 0;
+    transition: all 0.7s ease-in;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    text-align: center;
+    padding: 20px 23px 23px 23px;
+    box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
+
+}
+
+.item-container:hover .item-information {
+    opacity: 1;
+}
+
+.item-information-price-color {
+    color: #88c000;
+    font-weight: 500;
+}
+
+@media (max-width: 576px) {
+
+    .timeMainContainer {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap:15px;
+    }
+
+    .foodMunuContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 45px;
+    }
+
+}

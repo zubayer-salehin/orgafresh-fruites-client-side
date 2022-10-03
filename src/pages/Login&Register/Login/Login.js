@@ -59,7 +59,7 @@ const Login = () => {
     return (
         <>
             <div className='d-flex justify-content-center'>
-                <div className='form-login px-5 py-4 my-5 form-shadow'>
+                <div className='form-login px-5 py-4 login-margin form-shadow'>
                     <h3 className='title mb-4 text-center'>Log in</h3>
                     <form onSubmit={handleLogInSubmit}>
                         <div className='position-relative input rounded'>

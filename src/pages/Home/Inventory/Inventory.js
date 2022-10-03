@@ -1,8 +1,9 @@
+import { faShieldVirus, faTruck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Loading from '../../Shared/Loading/Loading';
-import Product from '../Product/Product';
 import "./Inventory.css";
 
 const Inventory = () => {
@@ -45,14 +46,38 @@ const Inventory = () => {
     }
 
 
-    return loading ? <Loading loadingStatus="true"></Loading> :
-        <div id='Inventory'>
-            <h1 className='my-5 pt-3 pb-1 text-center'>Our Inventory</h1>
-            <Container className='mb-4'>
-                <div className="inventory-container mb-5">
-                    {fruites?.map(product => <Product key={Math.random() * 10000} product={product}></Product>)}
-                </div>
-                <div className='d-block pt-3 text-center'>
+    return (
+        <div id='inventory'>
+            <h1 className='titleTopPadding text-center titleLine fw600'>Our Inventory</h1>
+            <Container className='mb-5'>
+                {loading ? <Loading loadingStatus="true"></Loading> :
+                    <div className="fruiteContainer mb-5">
+                        {fruites?.map(fruite => <div key={fruite?._id} className="fruite">
+                            <div className='fruiteImageContainer d-flex align-items-center'>
+                                <img className='fruiteImage' src={fruite.image} alt="" />
+                            </div>
+                            <div>
+                                <h2 className='fruiteName'>{fruite.name}</h2>
+                                <h3 className='fruitePrice'>R$<span className='fruiteSymbol'>{fruite.price}</span></h3>
+                                <p className='fruiteMiniTitle'>SUPPLIER AND QUANTITY</p>
+                                <div className='supplierAndQuantityContainer'>
+                                    <div className='d-flex flex-column align-items-center'>
+                                        <h6 className='supplierName'>{fruite.supplierName}</h6>
+                                        <h5 className='supplierInfo'> <FontAwesomeIcon className='iconColor' icon={faTruck}></FontAwesomeIcon> Supplier</h5>
+                                    </div>
+                                    <div className='d-flex flex-column align-items-center'>
+                                        <h6 className='supplierName'>{fruite.quantity}</h6>
+                                        <h5 className='supplierInfo'> <FontAwesomeIcon className='iconColor' icon={faShieldVirus}></FontAwesomeIcon> Quantity</h5>
+                                    </div>
+                                </div>
+                                <p className='fruiteMiniTitle'>BENEFITS</p>
+                                <p className='fruiteDescription'>{fruite.description.slice(0, 120) + ".."}</p>
+                                <button onClick={() => navigate(`/inventory/${fruite._id}`)} className='stockUpdateBtn'>Stock Update</button>
+                            </div>
+                        </div>)}
+                    </div>
+                }
+                <div className='d-block pt-3 text-center pb-5'>
                     <button id='prevNextBtn' onClick={handlePreviou} className='prevBtn'>Prev</button>
                     <div className='pagination d-inline'>
                         {[...Array(pageCount).keys()].map((number, index) => <button
@@ -62,10 +87,8 @@ const Inventory = () => {
                     <button onClick={handleNext} id='prevNextBtn' className='nextBtn'>Next</button>
                 </div>
             </Container>
-            <div className="text-center pt-4">
-                <button onClick={() => navigate("/manageItem")} type='button' className='invetoryBtn py-3 px-5 fs-5'>Manage Inventories</button>
-            </div>
         </div>
+    )
 };
 
 export default Inventory;

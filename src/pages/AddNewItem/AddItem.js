@@ -29,7 +29,6 @@ const AddEvent = () => {
                 image: e.target.image.value,
                 description: e.target.description.value
             }
-            console.log(addItemInfo);
 
             fetch('https://sleepy-waters-32923.herokuapp.com/fruites', {
                 method: 'POST',
@@ -40,7 +39,7 @@ const AddEvent = () => {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log('Success:', data);
+
                 })
 
             fetch('https://sleepy-waters-32923.herokuapp.com/myItem', {
@@ -52,7 +51,7 @@ const AddEvent = () => {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log('Success:', data);
+
                 })
             e.target.reset();
             toast.success("Added Successfully");

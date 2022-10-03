@@ -1,5 +1,5 @@
 .orStyle div{
-    width:24%;
+    width:23%;
     height:1px;
     background-color: gray;
 }
@@ -10,7 +10,7 @@
 
 .redirect-page-link{
     color:#717070;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .green{
@@ -65,4 +65,12 @@
 .form-shadow{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 8px;
+}
+
+.login-margin{
+    margin:55px 0px;
+}
+
+.register-margin{
+    margin:14px 0px;
 }

@@ -16,14 +16,13 @@ const MyItem = () => {
     const [fruiteName, setFruiteName] = useState("");
     const [loading, setLoading] = useState(true);
     let index = 0;
-    
+
     useEffect(() => {
         setLoading(true);
         const email = user?.email;
         fetch(`https://sleepy-waters-32923.herokuapp.com/myItem?email=${email}`)
             .then(res => res.json())
             .then(data => {
-                console.log("success", data)
                 setMyFruites(data);
                 setLoading(false);
             })
@@ -45,46 +44,49 @@ const MyItem = () => {
                 method: "DELETE"
             })
                 .then(res => res.json())
-                .then(data => console.log(data))
+                .then(data => {
+
+                })
             toast.success(`${name} Successfully Deleted`);
         } else {
             toast.info("Thank you for not Deleted")
         }
     }
+
     return (loading ? <Loading loadingStatus="true"></Loading> :
-    <>
-        <div className='mb-5'>
-            <h1 className='text-center my-3 pb-2'>My Item</h1>
-            <div className='my-item-container'>
-                <Table responsive bordered className='text-center'>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>User Name</th>
-                            <th>Email</th>
-                            <th>Fruite Name</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>ACTION</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {myFruites.map(fruite => <tr key={fruite._id} className='fw-500'>
-                            <td className='pt-3'>{++index}</td>
-                            <td className='pt-3'>{fruite.userName}</td>
-                            <td className='pt-3'>{fruite.email}</td>
-                            <td className='pt-3'>{fruite.name}</td>
-                            <td className='pt-3'>{fruite.price}</td>
-                            <td className='pt-3'>{fruite.quantity}</td>
-                            <td className='deleteBtn'><button onClick={() => handleDeleteItem(fruite._id, fruite.email, fruite.name)} className='bg-danger border-0 text-light py-2 fw-500 px-4 rounded'><FontAwesomeIcon className='delete-icon' icon={faTrashCan}></FontAwesomeIcon>Delete</button></td>
-                        </tr>
-                        )}
-                    </tbody>
-                </Table>
-            </div>
-        </div >
-        <Footer></Footer>
-    </>    
+        <>
+            <div className='mb-5'>
+                <h1 className='text-center my-3 pb-2'>My Item</h1>
+                <div className='my-item-container'>
+                    <Table responsive bordered className='text-center'>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>User Name</th>
+                                <th>Email</th>
+                                <th>Fruite Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {myFruites.map(fruite => <tr key={fruite._id} className='fw-500'>
+                                <td className='pt-3'>{++index}</td>
+                                <td className='pt-3'>{fruite.userName}</td>
+                                <td className='pt-3'>{fruite.email}</td>
+                                <td className='pt-3'>{fruite.name}</td>
+                                <td className='pt-3'>{fruite.price}</td>
+                                <td className='pt-3'>{fruite.quantity}</td>
+                                <td className='deleteBtn'><button onClick={() => handleDeleteItem(fruite._id, fruite.email, fruite.name)} className='bg-danger border-0 text-light py-2 fw-500 px-4 rounded'><FontAwesomeIcon className='delete-icon' icon={faTrashCan}></FontAwesomeIcon>Delete</button></td>
+                            </tr>
+                            )}
+                        </tbody>
+                    </Table>
+                </div>
+            </div >
+            <Footer></Footer>
+        </>
     )
 };
 

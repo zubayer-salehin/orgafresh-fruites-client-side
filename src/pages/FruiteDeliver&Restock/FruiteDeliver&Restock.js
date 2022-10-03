@@ -58,7 +58,9 @@ const FruiteDetail = () => {
             }
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+
+            })
     }
 
     const handleClose = () => {
@@ -86,7 +88,7 @@ const FruiteDetail = () => {
                 .then(data => {
                     setGetInputUpdateQuantity(totalQuantity + 1);
                 })
-                
+
             fetch(`https://sleepy-waters-32923.herokuapp.com/myItem?email=${email}&name=${name}`, {
                 method: 'PUT',
                 body: JSON.stringify(user),
@@ -95,7 +97,9 @@ const FruiteDetail = () => {
                 }
             })
                 .then(res => res.json())
-                .then(data => console.log(data))
+                .then(data => {
+
+                })
 
             handleClose()
         } else {
@@ -109,8 +113,8 @@ const FruiteDetail = () => {
     return (loading ? <Loading loadingStatus="true"></Loading> :
         <>
             <div className='fruite-container'>
-                <div className="fruite-wrapper fruite-wrapper">
-                    <div className="fruite-image">
+                <div className="fruite-wrapper">
+                    <div className="fruiteDeliverRestockImage">
                         <img src={fruite.image} alt="" />
                     </div>
                     <div className="fruite-info">
@@ -139,7 +143,7 @@ const FruiteDetail = () => {
                         <div className='mt-3 fruite-text-color'>
                             <small>DESCRIPTION : </small>
                         </div>
-                        <p className='mt-1'>{fruite.description.slice(0, 152)}</p>
+                        <p className='mt-1'>{fruite.description + "."}</p>
                         <button onClick={() => handleDelivered(fruite.email, fruite.name)} className='button delivered mb-4 me-5' type='button'>Delivered</button>
                         <div className='d-inline'>
                             <button onClick={handleShow} className='delivered restock bg-success' type='button'>Restock</button>

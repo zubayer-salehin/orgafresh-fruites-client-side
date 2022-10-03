@@ -8,18 +8,23 @@
     align-items: center;
     border-radius: 4px;
     width: 55%;
-    margin:40px 0px;
+    margin: 30px 0px 70px 0px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.fruite-image {
-    width: 40%
+.fruiteDeliverRestockImage {
+    width: 40%;
+    text-align: center
+}
+
+.fruiteDeliverRestockImage img {
+    width: 100%;
 }
 
 .fruite-info {
     width: 60%;
-    padding-left:1.5rem;
-    padding-right:1rem;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
 }
 
 .fruite-text-color {
@@ -29,7 +34,7 @@
 .fruite-title-color {
     color: #403f3f;
     font-size: 40px;
-    margin-bottom:12px;
+    margin-bottom: 8px;
 }
 
 .te-ge {
@@ -38,7 +43,7 @@
 
 .fruite-price {
     color: #87c140;
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 400;
 }
 
@@ -56,36 +61,44 @@
     transform: scale(0.97);
 }
 
-.restock{
+.restock {
     border: none;
-    color:white;
+    color: white;
     border-radius: 2px;
     font-weight: 500;
 }
 
 @media (max-width: 576px) {
     .fruite-container {
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .fruite-wrapper{
+    .fruite-wrapper {
         display: flex;
         flex-direction: column;
-        width:375px;
-        margin-left:19px;
-        margin-right:19px;
+        width: 375px;
+        margin-left: 19px;
+        margin-right: 19px;
     }
 
-    .fruite-image {
+    .fruiteDeliverRestockImage {
         width: 100%
     }
 
     .fruite-info {
         width: 85%;
-        padding-left:0.25rem;
-        padding-right:0.25rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
         margin-bottom: 1rem;
     }
+}
+
+@media (min-width: 1400px) {
+
+    .fruite-wrapper {
+        width: 45%;
+    }
+
 }

@@ -9,8 +9,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Social = () => {
 
     const navigate = useNavigate();
-    const [signInWithGoogle, googleUser, googleLoading] = useSignInWithGoogle(auth);
-    const [signInWithGithub, githubUser, githubLoading] = useSignInWithGithub(auth);
+    const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
+    const [signInWithGithub, githubUser] = useSignInWithGithub(auth);
     let location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
