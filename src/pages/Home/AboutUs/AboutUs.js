@@ -1,6 +1,6 @@
 import React from 'react';
 import "./AboutUs.css";
-import Image from "../../../images/AboutUs/top-view-tasty-sliced-fruits-with-fresh-berries-fruits-dark-background.jpg";
+import Image from "../../../images/AboutUs/top-view-tasty-sliced-fruits-with-fresh-berries-fruits-dark-background-min.jpg";
 import image1 from "../../../images/AboutUs/sec1.png"
 import image2 from "../../../images/AboutUs/sec2.png"
 import image3 from "../../../images/AboutUs/sec3.png"

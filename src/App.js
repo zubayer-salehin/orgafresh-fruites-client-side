@@ -14,11 +14,23 @@ import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/Shared/NotFound/NotFound';
 import AboutUs from './pages/AboutUs/AboutUs';
 import ScrollToTop from './ScrollToTop';
+import { useEffect, useState } from 'react';
+import Loading from './pages/Shared/Loading/Loading';
 
 
 function App() {
-  return (
-    <>
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, [1500])
+  }, [])
+
+  return (loading ? <Loading loadingStatus="true"></Loading> :
+    <div>
       <ScrollToTop></ScrollToTop>
       <Header></Header>
       <Routes>
@@ -34,7 +46,7 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer></ToastContainer>
-    </>
+    </div>
   );
 }
 
