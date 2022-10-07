@@ -55,7 +55,7 @@ const MyItem = () => {
 
     return (loading ? <Loading loadingStatus="true"></Loading> :
         <>
-            <div className='mb-5'>
+            <div className='mb-5 pb-5'>
                 <h1 className='text-center my-3 pb-2'>My Item</h1>
                 <div className='my-item-container'>
                     <Table responsive bordered className='text-center'>

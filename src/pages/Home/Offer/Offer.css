@@ -1,7 +1,7 @@
 .offer {
     background-image: url("/src/images/bg3-1.jpg");
     background-position: 0 0 !important;
-    background-repeat: no-repeat !important;
+    background-size: cover;
 }
 
 .titlePadding {
@@ -100,14 +100,14 @@
     font-weight: 500;
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
 
     .timeMainContainer {
         width: 80%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
-        gap:15px;
+        gap: 15px;
     }
 
     .foodMunuContainer {

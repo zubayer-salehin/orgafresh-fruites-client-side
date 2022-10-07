@@ -8,7 +8,7 @@ function GoogleMap() {
     const position = [24.433331, 90.76667]
 
     return (
-        <div className='px-3 mb-5 pb-4'>
+        <div className='px-3 mb-5 pb-5'>
             <h1 className='text-center titleLine fw600 locatoinTitlePaddingBottom'>Our Location</h1>
             <MapContainer style={{ width: "100%", height: "550px" }} center={position} zoom={7} scrollWheelZoom={false}>
                 <TileLayer

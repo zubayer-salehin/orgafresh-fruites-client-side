@@ -16,7 +16,7 @@ const Banner = () => {
                         alt="First slide" />
                     <Carousel.Caption>
                         <h3 className='sliderTitle'>fast and testy</h3>
-                        <p className='sliderDescription'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi <br /> culpa eius adipisci omnis doloremque itaque.</p>
+                        <p className='sliderDescription'>Fruit is such a fundamental word that underpins not only who we <br /> are as people, but echoes through all cultures.</p>
                         <button type='button' className='sliderButton'>Shop Now</button>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -27,7 +27,7 @@ const Banner = () => {
                         alt="Second slide" />
                     <Carousel.Caption>
                         <h3 className='sliderTitle'>organic testy</h3>
-                        <p className='sliderDescription'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi <br /> culpa eius adipisci omnis doloremque itaque.</p>
+                        <p className='sliderDescription'>Fruit is such a fundamental word that underpins not only who we <br /> are as people, but echoes through all cultures.</p>
                         <button type='button' className='sliderButton'>Shop Now</button>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -38,7 +38,7 @@ const Banner = () => {
                         alt="Third slide" />
                     <Carousel.Caption>
                         <h3 className='sliderTitle'>sale up 50%</h3>
-                        <p className='sliderDescription'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi <br /> culpa eius adipisci omnis doloremque itaque.</p>
+                        <p className='sliderDescription'>Fruit is such a fundamental word that underpins not only who we <br /> are as people, but echoes through all cultures.</p>
                         <button type='button' className='sliderButton'>Shop Now</button>
                     </Carousel.Caption>
                 </Carousel.Item>

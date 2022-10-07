@@ -62,7 +62,7 @@ const AddEvent = () => {
 
     return (
         <>
-            <div className='d-flex justify-content-center pt-1 pb-2'>
+            <div className='d-flex justify-content-center pt-1 pb-5 mb-5'>
                 <div style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", width: "380px" }} className='my-3 px-5 py-4 rounded addItem-wrapper'>
                     <h2 className='text-center pb-2'>Add Fruite Item</h2>
                     <form className=' mt-3' onSubmit={handleAddNewItem}>

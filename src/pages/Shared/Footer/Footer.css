@@ -4,6 +4,20 @@
     font-style: italic;
 }
 
+.footerPadding{
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
 .form-control.shadow-0:focus {
     box-shadow: none;
+}
+
+@media screen and (max-width) {
+
+    .footerPadding{
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
 }
