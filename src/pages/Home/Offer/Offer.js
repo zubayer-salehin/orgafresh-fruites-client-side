@@ -46,7 +46,7 @@ const Offer = () => {
     return (
         <div className='offer'>
             <h2 className='fs-1 fw500 text-center text-light titlePadding'>Deal Of The Day</h2>
-            <p className='timeDescription'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.</p>
+            <p className='timeDescription'>Orgafresh fresh fruites Deals Promotion. Offer Valid form 5th october to 7th December<br /> Offer valid at all Orgafresh Hypermarkets across UAE.</p>
             <Countdown date={Date.now() + 6566400000} renderer={renderer} />
 
             <Container className="offerFoodPadddingTop">
