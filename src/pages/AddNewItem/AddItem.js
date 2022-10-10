@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 import auth from '../../firebase.init';
 import useFruites from '../Hooks/useFruites';
 import Footer from '../Shared/Footer/Footer';
@@ -39,7 +39,15 @@ const AddEvent = () => {
             })
                 .then(response => response.json())
                 .then(data => {
-
+                    if (data) {
+                        Swal.fire({
+                            position: 'top-center',
+                            icon: 'success',
+                            title: 'Your fruite has been added',
+                            showConfirmButton: true,
+                        })
+                        e.target.reset();
+                    }
                 })
 
             fetch('https://sleepy-waters-32923.herokuapp.com/myItem', {
@@ -51,12 +59,14 @@ const AddEvent = () => {
             })
                 .then(response => response.json())
                 .then(data => {
-
                 })
-            e.target.reset();
-            toast.success("Added Successfully");
         } else {
-            toast.warn("Fruite Name is Already Exists");
+            Swal.fire({
+                position: 'top-center',
+                icon: 'warning',
+                title: `${name} fruite is already exists`,
+                showConfirmButton: true,
+            })
         }
     }
 

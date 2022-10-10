@@ -1,6 +1,7 @@
+import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import './App.css';
 import AddItem from './pages/AddNewItem/AddItem';
 import FruiteDetail from './pages/FruiteDeliver&Restock/FruiteDeliver&Restock';
 import Home from './pages/Home/Home/Home';
@@ -10,7 +11,6 @@ import RequireAuth from './pages/Login&Register/RequireAuth/RequireAuth';
 import ManageItem from './pages/ManageItem/ManageItem';
 import MyItem from './pages/MyItem/MyItem';
 import Header from './pages/Shared/Header/Header';
-import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/Shared/NotFound/NotFound';
 import AboutUs from './pages/AboutUs/AboutUs';
 import ScrollToTop from './ScrollToTop';

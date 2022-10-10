@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 import Footer from '../Shared/Footer/Footer';
 import Loading from '../Shared/Loading/Loading';
 import "./ManageItem.css";
@@ -27,26 +27,59 @@ const ManageItem = () => {
     }, [deleteId])
 
     const handleDeleteItem = (id, email, name) => {
-        const confirmBox = window.confirm("Are you sure you want to delete?");
-        if (confirmBox) {
-            fetch(`https://sleepy-waters-32923.herokuapp.com/fruites/${id}`, {
-                method: "DELETE"
-            })
-                .then(res => res.json())
-                .then(data => {
-                    setDeleteId(id);
-                })
-            fetch(`https://sleepy-waters-32923.herokuapp.com/myItem?email=${email}&name=${name}`, {
-                method: "DELETE"
-            })
-                .then(res => res.json())
-                .then(data => {
 
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: `You want to delete ${name} fruite`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`https://sleepy-waters-32923.herokuapp.com/fruites/${id}`, {
+                    method: "DELETE"
                 })
-            toast.success(`${name} Successfully Deleted`)
-        } else {
-            toast.info("Thank you for not Deleted")
-        }
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount) {
+                            swalWithBootstrapButtons.fire(
+                                'Deleted!',
+                                `${name} fruite is deleted`,
+                                'success'
+                            )
+                            setDeleteId(id);
+                        }
+                    })
+
+                fetch(`https://sleepy-waters-32923.herokuapp.com/myItem?email=${email}&name=${name}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                    })
+
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire(
+                    'Cancelled',
+                    `Your ${name} fruite is safe`,
+                    'error'
+                )
+            }
+        })
     }
 
 

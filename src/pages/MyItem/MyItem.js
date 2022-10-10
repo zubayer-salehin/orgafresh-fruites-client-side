@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading/Loading';
 import Footer from "../Shared/Footer/Footer"
 import "./MyItem.css";
+import Swal from 'sweetalert2';
 
 const MyItem = () => {
 
@@ -30,27 +30,56 @@ const MyItem = () => {
 
 
     const handleDeleteItem = (id, email, name) => {
-        const confirmBox = window.confirm("Are you sure you want to delete?");
-        if (confirmBox) {
-            fetch(`https://sleepy-waters-32923.herokuapp.com/myItem/${id}`, {
-                method: "DELETE"
-            })
-                .then(res => res.json())
-                .then(data => {
-                    setFruiteName(name);
-                })
 
-            fetch(`https://sleepy-waters-32923.herokuapp.com/fruites?email=${email}&name=${name}`, {
-                method: "DELETE"
-            })
-                .then(res => res.json())
-                .then(data => {
-
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+        })
+        swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`https://sleepy-waters-32923.herokuapp.com/myItem/${id}`, {
+                    method: "DELETE"
                 })
-            toast.success(`${name} Successfully Deleted`);
-        } else {
-            toast.info("Thank you for not Deleted")
-        }
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.acknowledged) {
+                            swalWithBootstrapButtons.fire(
+                                'Deleted!',
+                                `${name} fruite was deleted`,
+                                'success'
+                            )
+                            setFruiteName(name);
+                        }
+                    })
+
+                fetch(`https://sleepy-waters-32923.herokuapp.com/fruites?email=${email}&name=${name}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                    })
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire(
+                    'Cancelled',
+                    `Your ${name} fruite is safe`,
+                    'error'
+                )
+            }
+        })
     }
 
     return (loading ? <Loading loadingStatus="true"></Loading> :
