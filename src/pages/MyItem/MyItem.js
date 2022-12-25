@@ -20,7 +20,7 @@ const MyItem = () => {
     useEffect(() => {
         setLoading(true);
         const email = user?.email;
-        fetch(`https://sleepy-waters-32923.herokuapp.com/myItem?email=${email}`)
+        fetch(`https://orgafresh-fruites-server-side.onrender.com/myItem?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 setMyFruites(data);
@@ -48,7 +48,7 @@ const MyItem = () => {
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://sleepy-waters-32923.herokuapp.com/myItem/${id}`, {
+                fetch(`https://orgafresh-fruites-server-side.onrender.com/myItem/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -63,7 +63,7 @@ const MyItem = () => {
                         }
                     })
 
-                fetch(`https://sleepy-waters-32923.herokuapp.com/fruites?email=${email}&name=${name}`, {
+                fetch(`https://orgafresh-fruites-server-side.onrender.com/fruites?email=${email}&name=${name}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

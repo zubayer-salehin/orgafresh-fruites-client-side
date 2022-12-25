@@ -30,7 +30,7 @@ const AddEvent = () => {
                 description: e.target.description.value
             }
 
-            fetch('https://sleepy-waters-32923.herokuapp.com/fruites', {
+            fetch('https://orgafresh-fruites-server-side.onrender.com/fruites', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const AddEvent = () => {
                     }
                 })
 
-            fetch('https://sleepy-waters-32923.herokuapp.com/myItem', {
+            fetch('https://orgafresh-fruites-server-side.onrender.com/myItem', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

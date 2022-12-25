@@ -5,7 +5,7 @@ const useFruites = () => {
     const [fruites,setFruites] = useState([]);
 
     useEffect(() => {
-        fetch("https://sleepy-waters-32923.herokuapp.com/fruites")
+        fetch("https://orgafresh-fruites-server-side.onrender.com/fruites")
             .then(res => res.json())
             .then(data => {
                 setFruites(data)
