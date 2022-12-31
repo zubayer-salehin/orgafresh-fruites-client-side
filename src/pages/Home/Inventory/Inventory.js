@@ -15,7 +15,7 @@ const Inventory = () => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        fetch("https://orgafresh-fruites-server-side.onrender.com/fruiteCount")
+        fetch("https://orgafresh-fruites-server-side.vercel.app/fruiteCount")
             .then(res => res.json())
             .then(data => {
                 const pageNumber = Math.ceil(data.count / 6)
@@ -25,7 +25,7 @@ const Inventory = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://orgafresh-fruites-server-side.onrender.com/fruites?page=${page}&size=${size}`)
+        fetch(`https://orgafresh-fruites-server-side.vercel.app/fruites?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setFruites(data)

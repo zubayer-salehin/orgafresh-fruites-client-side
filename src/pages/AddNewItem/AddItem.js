@@ -30,7 +30,7 @@ const AddEvent = () => {
                 description: e.target.description.value
             }
 
-            fetch('https://orgafresh-fruites-server-side.onrender.com/fruites', {
+            fetch('https://orgafresh-fruites-server-side.vercel.app/fruites', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const AddEvent = () => {
                     }
                 })
 
-            fetch('https://orgafresh-fruites-server-side.onrender.com/myItem', {
+            fetch('https://orgafresh-fruites-server-side.vercel.app/myItem', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

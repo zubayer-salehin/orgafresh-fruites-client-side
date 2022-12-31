@@ -18,7 +18,7 @@ const ManageItem = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("https://orgafresh-fruites-server-side.onrender.com/fruites")
+        fetch("https://orgafresh-fruites-server-side.vercel.app/fruites")
             .then(res => res.json())
             .then(data => {
                 setFruites(data)
@@ -47,7 +47,7 @@ const ManageItem = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://orgafresh-fruites-server-side.onrender.com/fruites/${id}`, {
+                fetch(`https://orgafresh-fruites-server-side.vercel.app/fruites/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -62,7 +62,7 @@ const ManageItem = () => {
                         }
                     })
 
-                fetch(`https://orgafresh-fruites-server-side.onrender.com/myItem?email=${email}&name=${name}`, {
+                fetch(`https://orgafresh-fruites-server-side.vercel.app/myItem?email=${email}&name=${name}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
